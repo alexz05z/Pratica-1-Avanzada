@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>proyect.Productos &#8212; documentación de Tienda_online - 1</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=cb25574f" />
+    <script src="../../_static/documentation_options.js?v=92345faf"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=efdbd0b9"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Código fuente para proyect.Productos</h1><div class="highlight"><pre>
+<div class="viewcode-block" id="Productos">
+<a class="viewcode-back" href="../../proyect.html#proyect.Productos.Productos">[documentos]</a>
+<span></span><span class="k">class</span> <span class="nc">Productos</span> <span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span> <span class="p">,</span><span class="n">id_producto</span> <span class="p">:</span><span class="nb">str</span> <span class="p">,</span> <span class="n">nombre</span> <span class="p">:</span> <span class="nb">str</span> <span class="p">,</span> <span class="n">precio</span> <span class="p">:</span> <span class="nb">float</span> <span class="p">,</span> <span class="n">stock</span> <span class="p">:</span><span class="nb">int</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Funcion __init__ : Crea el objeto</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            id_producto (str):Id del producto es unica</span>
+<span class="sd">            nombre (str): nombre del producto</span>
+<span class="sd">            precio (float): precio del producto</span>
+<span class="sd">            stock (int): stock del producto</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__id_productos</span> <span class="o">=</span> <span class="n">id_producto</span>  <span class="c1"># Aquí se inicializa el id del producto</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__nombre</span> <span class="o">=</span> <span class="n">nombre</span>            <span class="c1"># Aquí se inicializa el nombre del producto</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__precio</span> <span class="o">=</span> <span class="n">precio</span>            <span class="c1"># Aquí se inicializa el precio del producto</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__stock</span> <span class="o">=</span> <span class="n">stock</span>              <span class="c1"># Aquí se inicializa la cantidad disponible de stock</span>
+
+    <span class="c1"># Métodos Get y Set para el atributo id_producto</span>
+<div class="viewcode-block" id="Productos.get_id_productos">
+<a class="viewcode-back" href="../../proyect.html#proyect.Productos.Productos.get_id_productos">[documentos]</a>
+    <span class="k">def</span> <span class="nf">get_id_productos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;get_id_productos</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: devueve el id producto</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__id_productos</span>  <span class="c1"># Devuelve el id del producto</span></div>
+
+
+<div class="viewcode-block" id="Productos.set_id_productos">
+<a class="viewcode-back" href="../../proyect.html#proyect.Productos.Productos.set_id_productos">[documentos]</a>
+    <span class="k">def</span> <span class="nf">set_id_productos</span><span class="p">(</span><span class="bp">self</span> <span class="p">,</span> <span class="n">id_producto</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;set_id_productos</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            id_producto (str): es el id del producto que se le pasa para que modifique el parametro</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__id_productos</span> <span class="o">=</span> <span class="n">id_producto</span>  <span class="c1"># Modifica el id del producto</span></div>
+
+
+    <span class="c1"># Métodos Get y Set para el atributo nombre</span>
+<div class="viewcode-block" id="Productos.get_nombre">
+<a class="viewcode-back" href="../../proyect.html#proyect.Productos.Productos.get_nombre">[documentos]</a>
+    <span class="k">def</span> <span class="nf">get_nombre</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;get_nombre</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: devuelve el nombre del producto</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__nombre</span>  <span class="c1"># Devuelve el nombre del producto</span></div>
+
+
+<div class="viewcode-block" id="Productos.set_nombre">
+<a class="viewcode-back" href="../../proyect.html#proyect.Productos.Productos.set_nombre">[documentos]</a>
+    <span class="k">def</span> <span class="nf">set_nombre</span><span class="p">(</span><span class="bp">self</span> <span class="p">,</span> <span class="n">nombre</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;set_nombre</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            nombre (str): es el nombre del producto que se le pasa para que modifique el parametro</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__nombre</span> <span class="o">=</span> <span class="n">nombre</span>  <span class="c1"># Modifica el nombre del producto</span></div>
+
+
+    <span class="c1"># Métodos Get y Set para el atributo precio</span>
+<div class="viewcode-block" id="Productos.get_precio">
+<a class="viewcode-back" href="../../proyect.html#proyect.Productos.Productos.get_precio">[documentos]</a>
+    <span class="k">def</span> <span class="nf">get_precio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;get_precio</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            float: devuelve el precio del producto</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__precio</span>  <span class="c1"># Devuelve el precio del producto</span></div>
+
+
+<div class="viewcode-block" id="Productos.set_precio">
+<a class="viewcode-back" href="../../proyect.html#proyect.Productos.Productos.set_precio">[documentos]</a>
+    <span class="k">def</span> <span class="nf">set_precio</span><span class="p">(</span><span class="bp">self</span> <span class="p">,</span> <span class="n">precio</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;set_precio</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            precio (float): es el precio del producto que se le pasa para cambiarlo</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__precio</span> <span class="o">=</span> <span class="n">precio</span>  <span class="c1"># Modifica el precio del producto</span></div>
+
+
+    <span class="c1"># Métodos Get y Set para el atributo stock</span>
+<div class="viewcode-block" id="Productos.get_stock">
+<a class="viewcode-back" href="../../proyect.html#proyect.Productos.Productos.get_stock">[documentos]</a>
+    <span class="k">def</span> <span class="nf">get_stock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;get_stock</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            int: devuelve el stock del producto</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__stock</span>  <span class="c1"># Devuelve el stock del producto</span></div>
+
+
+<div class="viewcode-block" id="Productos.set_stock">
+<a class="viewcode-back" href="../../proyect.html#proyect.Productos.Productos.set_stock">[documentos]</a>
+    <span class="k">def</span> <span class="nf">set_stock</span><span class="p">(</span><span class="bp">self</span> <span class="p">,</span> <span class="n">stock</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;set_stock</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            stock (int): es el stock del producto que se le pasa para que modifique el parametro</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__stock</span> <span class="o">=</span> <span class="n">stock</span>  <span class="c1"># Modifica el stock del producto</span></div>
+
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; __str__</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: cadena de texto con toda la informacion del producto</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Este método retorna una cadena de texto con la información del producto</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;-Nombre: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__nombre</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1"> -ID: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__id_productos</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1"> -Precio: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__precio</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1"> -Stock: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__stock</span><span class="si">}</span><span class="s1">&#39;</span></div>
+
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Tienda_online</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">proyect</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Código de módulo</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2025, Alejandro.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

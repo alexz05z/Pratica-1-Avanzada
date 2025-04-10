@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>proyect.Clientes &#8212; documentación de Tienda_online - 1</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=cb25574f" />
+    <script src="../../_static/documentation_options.js?v=92345faf"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/translations.js?v=efdbd0b9"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Código fuente para proyect.Clientes</h1><div class="highlight"><pre>
+<div class="viewcode-block" id="Cliente">
+<a class="viewcode-back" href="../../proyect.html#proyect.Clientes.Cliente">[documentos]</a>
+<span></span><span class="k">class</span> <span class="nc">Cliente</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">id_cliente</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">nombre</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">direccion</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Funcion __init__ : Crea el objeto</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            id_cliente (str): Es el indentificador de cada cliente ; es unico para cada cliente</span>
+<span class="sd">            nombre (str): Nombre del cliente puede ser principalmente sin apellidos pero en caso necesario se pueden meter</span>
+<span class="sd">            email (str): Dirrecion de correo del cliente </span>
+<span class="sd">            direccion (str): Dirrecion del cliente</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__id_cliente</span> <span class="o">=</span> <span class="n">id_cliente</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__email</span> <span class="o">=</span> <span class="n">email</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__direccion</span> <span class="o">=</span> <span class="n">direccion</span>
+
+    <span class="c1"># Set y get de id_cliente</span>
+
+<div class="viewcode-block" id="Cliente.get_id_cliente">
+<a class="viewcode-back" href="../../proyect.html#proyect.Clientes.Cliente.get_id_cliente">[documentos]</a>
+    <span class="k">def</span> <span class="nf">get_id_cliente</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">        Cliente get_id_cliente : Es para mostrar el id del cliente de forma correcta , esto es necesario ya que los atributos los tenemos en privados</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            id_cliente (str) : Es el indentificador de cada cliente ; es unico para cada cliente</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__id_cliente</span></div>
+
+    
+<div class="viewcode-block" id="Cliente.set_id_cliente">
+<a class="viewcode-back" href="../../proyect.html#proyect.Clientes.Cliente.set_id_cliente">[documentos]</a>
+    <span class="k">def</span> <span class="nf">set_id_cliente</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">id_cliente</span><span class="p">):</span>
+
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Cliente set_id_cliente : Es para cambiar el id del cliente para esto se le pasa el nuevo id y lo modifica , esto es necesario ya que los atributos los tenemos en privados</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">__id_cliente</span> <span class="o">=</span> <span class="n">id_cliente</span></div>
+
+
+    <span class="c1"># Set y get de nombre</span>
+
+<div class="viewcode-block" id="Cliente.get_nombre">
+<a class="viewcode-back" href="../../proyect.html#proyect.Clientes.Cliente.get_nombre">[documentos]</a>
+    <span class="k">def</span> <span class="nf">get_nombre</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">        Cliente get_nombre : Es para mostrar el nombre del cliente de forma correcta , esto es necesario ya que los atributos los tenemos en privados</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            nombre (str) : Nombre del cliente puede ser principalmente sin apellidos pero en caso necesario se pueden meter</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__nombre</span></div>
+
+    
+<div class="viewcode-block" id="Cliente.set_nombre">
+<a class="viewcode-back" href="../../proyect.html#proyect.Clientes.Cliente.set_nombre">[documentos]</a>
+    <span class="k">def</span> <span class="nf">set_nombre</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nombre</span><span class="p">):</span>
+
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Cliente set_nombre : Es para cambiar el nombre del cliente para esto se le pasa el nuevo nombre y lo modifica , esto es necesario ya que los atributos los tenemos en privados</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">__nombre</span> <span class="o">=</span> <span class="n">nombre</span></div>
+
+    
+    <span class="c1"># Set y get de email</span>
+
+<div class="viewcode-block" id="Cliente.get_email">
+<a class="viewcode-back" href="../../proyect.html#proyect.Clientes.Cliente.get_email">[documentos]</a>
+    <span class="k">def</span> <span class="nf">get_email</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">        Cliente get_email : Es para mostrar el correo del cliente de forma correcta , esto es necesario ya que los atributos los tenemos en privados</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            email (str) : Dirrecion de correo del cliente</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__email</span></div>
+
+    
+<div class="viewcode-block" id="Cliente.set_email">
+<a class="viewcode-back" href="../../proyect.html#proyect.Clientes.Cliente.set_email">[documentos]</a>
+    <span class="k">def</span> <span class="nf">set_email</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">email</span><span class="p">):</span>
+
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Cliente set_email : Es para cambiar el correo del cliente para esto se le pasa el nuevo correo y lo modifica , esto es necesario ya que los atributos los tenemos en privados</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">__email</span> <span class="o">=</span> <span class="n">email</span></div>
+
+
+    <span class="c1"># Set y get de direccion</span>
+
+<div class="viewcode-block" id="Cliente.get_direccion">
+<a class="viewcode-back" href="../../proyect.html#proyect.Clientes.Cliente.get_direccion">[documentos]</a>
+    <span class="k">def</span> <span class="nf">get_direccion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">        Cliente get_dirrecion : Es para mostrar la dirrecion del cliente de forma correcta , esto es necesario ya que los atributos los tenemos en privados</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            direccion (str): Dirrecion del cliente</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__direccion</span></div>
+
+    
+<div class="viewcode-block" id="Cliente.set_direccion">
+<a class="viewcode-back" href="../../proyect.html#proyect.Clientes.Cliente.set_direccion">[documentos]</a>
+    <span class="k">def</span> <span class="nf">set_direccion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">direccion</span><span class="p">):</span>
+
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Cliente set_dirrecion : Es para cambiar la dirrecion del cliente para esto se le pasa la nueva dirrecion y la modifica , esto es necesario ya que los atributos los tenemos en privados</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">__direccion</span> <span class="o">=</span> <span class="n">direccion</span></div>
+
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;__str__</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            (str) : Muestrala la informacion del objeto de forma correcta ya que al tenerlos privados no se podrian ver </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39; ID: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">get_id_cliente</span><span class="p">()</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">Nombre: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">get_nombre</span><span class="p">()</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">Email: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">get_email</span><span class="p">()</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">Direccion: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">get_direccion</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span></div>
+
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Tienda_online</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">proyect</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Código de módulo</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2025, Alejandro.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
