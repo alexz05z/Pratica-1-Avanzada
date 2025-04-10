@@ -55,7 +55,7 @@ reseñas.append(reseña)
 #Menu
 
 def menu():
-
+    
     verdad = True # Varibla para manejar el bucle del menu
 
     while verdad:
